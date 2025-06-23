@@ -5,6 +5,7 @@ import ClientCarousel from './ClientCarousel/ClientCarousel';
 import Benefits from './BenifitsSection/Benifits';
 import BeMarchent from './BeMarchent/BeMarchent';
 import HowItWorks from './HowItsWork/HowItWorks';
+import Faq from './FAQ/Faq';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <ClientCarousel></ClientCarousel>
             <Benefits></Benefits>
             <BeMarchent></BeMarchent>
+            <Faq></Faq>
         </div>
     );
 };
