@@ -15,7 +15,7 @@ const AuthLayout = () => {
             <img src={AuthImage} className="max-w-sm rounded-lg" />
           </div>
         <div className="flex-1">
-          <h1 className="text-5xl font-bold">Box Office News!</h1>
+          <h1 className="text-5xl font-bold"></h1>
           <Outlet></Outlet>
         </div>
       </div>
