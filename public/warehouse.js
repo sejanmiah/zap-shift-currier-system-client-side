@@ -557,7 +557,7 @@
     "city": "Barisal",
     "covered_area": [
       "Band Road",
-      "Cox’s Road",
+      "Cox's Road",
       "Kawnia",
       "Rupatali",
       "Nathullabad"
@@ -678,7 +678,7 @@
     "district": "Kushtia",
     "city": "Kushtia",
     "covered_area": [
-      "Kushtia Sadar",
+      "Kushtia_Sadar",
       "Kumarkhali",
       "Khoksa",
       "Mirpur",
