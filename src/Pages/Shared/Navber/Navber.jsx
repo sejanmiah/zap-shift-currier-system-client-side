@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import ProFastLogo from '../ProFastLogo/ProFastLogo';
 
 const Navber = () => {
@@ -30,8 +30,9 @@ const Navber = () => {
         {NavIteams}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end gap-3">
+    <Link to="/login">Sign In</Link>
+    <Link to="/register">Register</Link>
   </div>
 </div>
     );
