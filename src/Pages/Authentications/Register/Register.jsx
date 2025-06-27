@@ -2,36 +2,70 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const Register = () => {
-    const {register,handleSubmit} = useForm();
-    const onSubmit = data => {
-        console.log(data);
-    }
-    return (
-        <div>
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  
-              <h1 className="text-5xl my-10 font-bold">Creat An Account now!</h1>
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <div className="card-body">
-        <form onSubmit={handleSubmit(onSubmit)}>
+  const onSubmit = data => {
+    console.log(data);
+  };
 
-        <fieldset className="fieldset">
-          <label className="label">Email</label>
-          <input type="email" {...register('email')} className="input" placeholder="Email" />
+  return (
+    <div>
+      <h1 className="text-5xl my-10 font-bold">Create An Account now!</h1>
 
-          <label className="label">Password</label>
-          <input type="password" {...register('password')} className="input" placeholder="Password" />
+      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card-body">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <fieldset className="fieldset">
 
-          <button className="btn btn-neutral mt-4">Login</button>
+              {/* Email Field */}
+              <label className="label">Email</label>
+              <input
+                type="email"
+                {...register('email', {
+                  required: 'Email is required',
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: 'Invalid email address',
+                  },
+                })}
+                className="input"
+                placeholder="Email"
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+              )}
 
-        </fieldset>
+              {/* Password Field */}
+              <label className="label">Password</label>
+              <input
+                type="password"
+                {...register('password', {
+                  required: 'Password is required',
+                  minLength: {
+                    value: 6,
+                    message: 'Password must be at least 6 characters',
+                  },
+                })}
+                className="input"
+                placeholder="Password"
+              />
+              {errors.password && (
+                <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
+              )}
 
-        </form>
-
+              <button type="submit" className="btn btn-neutral mt-4">
+                Register
+              </button>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </div>
-        </div>
-    );
+  );
 };
 
 export default Register;
