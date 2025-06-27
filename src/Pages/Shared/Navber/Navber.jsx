@@ -6,6 +6,7 @@ const Navber = () => {
 
     const NavIteams = <>
         <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/covarage">Covarage</NavLink></li>
         <li><NavLink to="/about">About Us</NavLink></li>
     </>
 
@@ -22,7 +23,7 @@ const Navber = () => {
             {NavIteams}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl"><ProFastLogo></ProFastLogo></a>
+    <a className=" text-xl"><ProFastLogo></ProFastLogo></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
