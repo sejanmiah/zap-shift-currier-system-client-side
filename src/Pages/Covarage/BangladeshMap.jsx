@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React, { useEffect, useState, useRef } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -20,9 +20,9 @@ const BangladeshMap = () => {
   const [search, setSearch] = useState('');
   const [filtered, setFiltered] = useState([]);
 
+  const mapRef = useRef(null);
   const center = [23.685, 90.3563]; // Bangladesh center
 
-  // Load warehouse data
   useEffect(() => {
     fetch('/warehouse.js')
       .then((res) => res.json())
@@ -37,20 +37,44 @@ const BangladeshMap = () => {
     if (search.trim() === '') {
       setFiltered(warehouse); // Show all if search is empty
     } else {
-      const matched = warehouse.filter(item =>
+      const matched = warehouse.filter((item) =>
         item.district.toLowerCase().includes(search.trim().toLowerCase())
       );
       setFiltered(matched);
     }
   };
 
+  // Custom component to update map view based on filtered markers
+  const MapBoundsUpdater = () => {
+    const map = useMap();
+
+    useEffect(() => {
+      if (filtered.length === 0) return;
+
+      if (filtered.length === 1) {
+        // If only one marker, fly to that location and zoom in
+        map.flyTo([filtered[0].latitude, filtered[0].longitude], 12, {
+          duration: 1.5,
+        });
+      } else {
+        // If multiple markers, fit bounds so all markers visible
+        const bounds = L.latLngBounds(
+          filtered.map((item) => [item.latitude, item.longitude])
+        );
+        map.fitBounds(bounds, { padding: [50, 50] });
+      }
+    },);
+
+    return null;
+  };
+
   return (
-    <div className="space-y-4">
+    <div className="w-full h-screen p-4">
       {/* 🔍 Search Input */}
-      <div className="flex gap-2">
+      <div className="mb-4 flex items-center justify-center gap-5 max-w-md mx-auto">
         <input
           type="text"
-          placeholder="Search by district name"
+          placeholder="Search by district"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
@@ -58,39 +82,44 @@ const BangladeshMap = () => {
         />
         <button
           onClick={handleSearch}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="px-4 py-2 bg-blue-600 text-white rounded"
         >
           Search
         </button>
       </div>
 
       {/* 🗺️ Map */}
-      <div className="h-[500px] w-full rounded-xl overflow-hidden shadow-lg">
-        <MapContainer center={center} zoom={7} scrollWheelZoom={true} style={{ height: '100%', width: '100%' }}>
-          <TileLayer
-            attribution='&copy; <a href="#">Sejan</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
+      <MapContainer
+        center={center}
+        zoom={7}
+        style={{ height: '80vh', width: '100%' }}
+        whenCreated={(mapInstance) => (mapRef.current = mapInstance)}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution="&copy; OpenStreetMap contributors"
+        />
 
-          {/* ✅ Dynamic Markers (Filtered) */}
-          {filtered.map((item, index) => (
-            <Marker key={index} position={[item.latitude, item.longitude]}>
-              <Popup>
-                <strong>{item.district}</strong><br />
-                Covered: {item.covered_area.join(', ')}<br />
-                <a
-                  href={item.flowchart}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline"
-                >
-                  View Flowchart
-                </a>
-              </Popup>
-            </Marker>
-          ))}
-        </MapContainer>
-      </div>
+        {/* Update map bounds when filtered changes */}
+        <MapBoundsUpdater />
+
+        {/* ✅ Dynamic Markers (Filtered) */}
+        {filtered.map((item, index) => (
+          <Marker
+            key={index}
+            position={[item.latitude, item.longitude]}
+            title={item.district}
+          >
+            <Popup>
+              <strong>{item.district}</strong> <br />
+              Covered: {item.covered_area.join(', ')} <br />
+              <a href={item.flowchart} target="_blank" rel="noopener noreferrer">
+                View Flowchart
+              </a>
+            </Popup>
+          </Marker>
+        ))}
+      </MapContainer>
     </div>
   );
 };

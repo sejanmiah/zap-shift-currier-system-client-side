@@ -689,5 +689,315 @@
     "flowchart": "https://example.com/kushtia-flowchart.png",
     "longitude": 89.122,
     "latitude": 23.9013
+  },
+{
+    "region": "Maharashtra",
+    "district": "Mumbai",
+    "city": "Mumbai",
+    "covered_area": ["Andheri", "Bandra", "Colaba", "Dadar"],
+    "status": "active",
+    "flowchart": "https://example.com/mumbai-flowchart.png",
+    "longitude": 72.8777,
+    "latitude": 19.076
+  },
+  {
+    "region": "Delhi",
+    "district": "New Delhi",
+    "city": "New Delhi",
+    "covered_area": ["Connaught Place", "Karol Bagh", "Dwarka", "Saket"],
+    "status": "active",
+    "flowchart": "https://example.com/delhi-flowchart.png",
+    "longitude": 77.1025,
+    "latitude": 28.7041
+  },
+  {
+    "region": "West Bengal",
+    "district": "Kolkata",
+    "city": "Kolkata",
+    "covered_area": ["Salt Lake", "Howrah", "Park Street", "Behala"],
+    "status": "active",
+    "flowchart": "https://example.com/kolkata-flowchart.png",
+    "longitude": 88.3639,
+    "latitude": 22.5726
+  },
+  {
+    "region": "Tamil Nadu",
+    "district": "Chennai",
+    "city": "Chennai",
+    "covered_area": ["T Nagar", "Velachery", "Adyar", "Kodambakkam"],
+    "status": "active",
+    "flowchart": "https://example.com/chennai-flowchart.png",
+    "longitude": 80.2707,
+    "latitude": 13.0827
+  },
+  {
+    "region": "Karnataka",
+    "district": "Bangalore",
+    "city": "Bangalore",
+    "covered_area": ["Whitefield", "Koramangala", "Indiranagar", "Jayanagar"],
+    "status": "active",
+    "flowchart": "https://example.com/bangalore-flowchart.png",
+    "longitude": 77.5946,
+    "latitude": 12.9716
+  },
+  {
+    "region": "Bavaria",
+    "district": "Munich",
+    "city": "Munich",
+    "covered_area": ["Maxvorstadt", "Schwabing", "Sendling", "Giesing"],
+    "status": "active",
+    "flowchart": "https://example.com/munich-flowchart.png",
+    "longitude": 11.581981,
+    "latitude": 48.135125
+  },
+  {
+    "region": "Berlin",
+    "district": "Berlin",
+    "city": "Berlin",
+    "covered_area": ["Mitte", "Kreuzberg", "Charlottenburg", "Prenzlauer Berg"],
+    "status": "active",
+    "flowchart": "https://example.com/berlin-flowchart.png",
+    "longitude": 13.405,
+    "latitude": 52.52
+  },
+  {
+    "region": "North Rhine-Westphalia",
+    "district": "Cologne",
+    "city": "Cologne",
+    "covered_area": ["Ehrenfeld", "Nippes", "Rodenkirchen", "Lindenthal"],
+    "status": "active",
+    "flowchart": "https://example.com/cologne-flowchart.png",
+    "longitude": 6.9603,
+    "latitude": 50.9375
+  },
+  {
+    "region": "Hesse",
+    "district": "Frankfurt",
+    "city": "Frankfurt",
+    "covered_area": ["Sachsenhausen", "Bockenheim", "Nordend", "Gallus"],
+    "status": "active",
+    "flowchart": "https://example.com/frankfurt-flowchart.png",
+    "longitude": 8.6821,
+    "latitude": 50.1109
+  },
+  {
+    "region": "Hamburg",
+    "district": "Hamburg",
+    "city": "Hamburg",
+    "covered_area": ["Altona", "Eimsbüttel", "Wandsbek", "Harburg"],
+    "status": "active",
+    "flowchart": "https://example.com/hamburg-flowchart.png",
+    "longitude": 9.9937,
+    "latitude": 53.5511
+  },
+  {
+    "region": "California",
+    "district": "Los Angeles",
+    "city": "Los Angeles",
+    "covered_area": ["Downtown", "Hollywood", "Santa Monica", "Beverly Hills"],
+    "status": "active",
+    "flowchart": "https://example.com/losangeles-flowchart.png",
+    "longitude": -118.2437,
+    "latitude": 34.0522
+  },
+  {
+    "region": "New York",
+    "district": "New York City",
+    "city": "New York City",
+    "covered_area": ["Manhattan", "Brooklyn", "Queens", "Bronx"],
+    "status": "active",
+    "flowchart": "https://example.com/nyc-flowchart.png",
+    "longitude": -74.006,
+    "latitude": 40.7128
+  },
+  {
+    "region": "Illinois",
+    "district": "Chicago",
+    "city": "Chicago",
+    "covered_area": ["The Loop", "Hyde Park", "Lincoln Park", "Wicker Park"],
+    "status": "active",
+    "flowchart": "https://example.com/chicago-flowchart.png",
+    "longitude": -87.6298,
+    "latitude": 41.8781
+  },
+  {
+    "region": "Texas",
+    "district": "Houston",
+    "city": "Houston",
+    "covered_area": ["Downtown", "Midtown", "Montrose", "The Heights"],
+    "status": "active",
+    "flowchart": "https://example.com/houston-flowchart.png",
+    "longitude": -95.3698,
+    "latitude": 29.7604
+  },
+  {
+    "region": "Arizona",
+    "district": "Phoenix",
+    "city": "Phoenix",
+    "covered_area": ["Downtown", "Arcadia", "Ahwatukee", "Encanto"],
+    "status": "active",
+    "flowchart": "https://example.com/phoenix-flowchart.png",
+    "longitude": -112.074,
+    "latitude": 33.4484
+  },
+  {
+    "region": "Ontario",
+    "district": "Toronto",
+    "city": "Toronto",
+    "covered_area": ["Downtown", "Scarborough", "North York", "Etobicoke"],
+    "status": "active",
+    "flowchart": "https://example.com/toronto-flowchart.png",
+    "longitude": -79.3832,
+    "latitude": 43.6532
+  },
+  {
+    "region": "British Columbia",
+    "district": "Vancouver",
+    "city": "Vancouver",
+    "covered_area": ["Downtown", "Kitsilano", "Richmond", "Burnaby"],
+    "status": "active",
+    "flowchart": "https://example.com/vancouver-flowchart.png",
+    "longitude": -123.1207,
+    "latitude": 49.2827
+  },
+  {
+    "region": "Kuala Lumpur",
+    "district": "Kuala Lumpur",
+    "city": "Kuala Lumpur",
+    "covered_area": ["Bukit Bintang", "Chow Kit", "KLCC", "Mont Kiara"],
+    "status": "active",
+    "flowchart": "https://example.com/kuala-lumpur-flowchart.png",
+    "longitude": 101.6869,
+    "latitude": 3.1390
+  },
+  {
+    "region": "Beijing Municipality",
+    "district": "Beijing",
+    "city": "Beijing",
+    "covered_area": ["Haidian", "Chaoyang", "Dongcheng", "Xicheng"],
+    "status": "active",
+    "flowchart": "https://example.com/beijing-flowchart.png",
+    "longitude": 116.4074,
+    "latitude": 39.9042
+  },
+  {
+    "region": "Kathmandu Valley",
+    "district": "Kathmandu",
+    "city": "Kathmandu",
+    "covered_area": ["Thamel", "Patan", "Bhaktapur", "Kirtipur"],
+    "status": "active",
+    "flowchart": "https://example.com/kathmandu-flowchart.png",
+    "longitude": 85.3240,
+    "latitude": 27.7172
+  },
+  {
+    "region": "Punjab",
+    "district": "Lahore",
+    "city": "Lahore",
+    "covered_area": ["Gulberg", "DHA", "Model Town", "Johar Town"],
+    "status": "active",
+    "flowchart": "https://example.com/lahore-flowchart.png",
+    "longitude": 74.3587,
+    "latitude": 31.5204
+  },
+  {
+    "region": "Thimphu District",
+    "district": "Thimphu",
+    "city": "Thimphu",
+    "covered_area": ["Changangkha", "Semtokha", "Hejo", "Changlimithang"],
+    "status": "active",
+    "flowchart": "https://example.com/thimphu-flowchart.png",
+    "longitude": 89.6390,
+    "latitude": 27.4728
+  },
+  {
+    "region": "Buenos Aires Province",
+    "district": "Buenos Aires",
+    "city": "Buenos Aires",
+    "covered_area": ["Palermo", "Recoleta", "La Boca", "Belgrano"],
+    "status": "active",
+    "flowchart": "https://example.com/buenosaires-flowchart.png",
+    "longitude": -58.3816,
+    "latitude": -34.6037
+  },
+  {
+    "region": "São Paulo",
+    "district": "São Paulo",
+    "city": "São Paulo",
+    "covered_area": ["Centro", "Pinheiros", "Moema", "Vila Mariana"],
+    "status": "active",
+    "flowchart": "https://example.com/saopaulo-flowchart.png",
+    "longitude": -46.6333,
+    "latitude": -23.5505
+  },
+  {
+    "region": "Seoul",
+    "district": "Seoul",
+    "city": "Seoul",
+    "covered_area": ["Gangnam", "Jongno", "Hongdae", "Mapo"],
+    "status": "active",
+    "flowchart": "https://example.com/seoul-flowchart.png",
+    "longitude": 126.9780,
+    "latitude": 37.5665
+  },
+  {
+    "region": "Tehran Province",
+    "district": "Tehran",
+    "city": "Tehran",
+    "covered_area": ["Valiasr", "Niavaran", "Shahrak-e Gharb", "Darband"],
+    "status": "active",
+    "flowchart": "https://example.com/tehran-flowchart.png",
+    "longitude": 51.3890,
+    "latitude": 35.6892
+  },
+  {
+    "region": "Kyiv Oblast",
+    "district": "Kyiv",
+    "city": "Kyiv",
+    "covered_area": ["Podil", "Pechersk", "Solomianskyi", "Shevchenkivskyi"],
+    "status": "active",
+    "flowchart": "https://example.com/kyiv-flowchart.png",
+    "longitude": 30.5234,
+    "latitude": 50.4501
+  },
+  {
+    "region": "Moscow Oblast",
+    "district": "Moscow",
+    "city": "Moscow",
+    "covered_area": ["Arbat", "Tverskoy", "Zamoskvorechye", "Khamovniki"],
+    "status": "active",
+    "flowchart": "https://example.com/moscow-flowchart.png",
+    "longitude": 37.6173,
+    "latitude": 55.7558
+  },
+  {
+    "region": "England",
+    "district": "London",
+    "city": "London",
+    "covered_area": ["Westminster", "Camden", "Southwark", "Kensington"],
+    "status": "active",
+    "flowchart": "https://example.com/london-flowchart.png",
+    "longitude": -0.1276,
+    "latitude": 51.5074
+  },
+  {
+    "region": "New South Wales",
+    "district": "Sydney",
+    "city": "Sydney",
+    "covered_area": ["CBD", "Bondi", "Manly", "Parramatta"],
+    "status": "active",
+    "flowchart": "https://example.com/sydney-flowchart.png",
+    "longitude": 151.2093,
+    "latitude": -33.8688
+  },
+  {
+    "region": "Vienna",
+    "district": "Vienna",
+    "city": "Vienna",
+    "covered_area": ["Innere Stadt", "Leopoldstadt", "Mariahilf", "Favoriten"],
+    "status": "active",
+    "flowchart": "https://example.com/vienna-flowchart.png",
+    "longitude": 16.3738,
+    "latitude": 48.2082
   }
 ]
