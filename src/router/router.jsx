@@ -7,6 +7,10 @@ import AuthLayout from "../Layout/AuthLayout";
 import LogIn from "../Pages/Authentications/LogIn/LogIn";
 import Register from "../Pages/Authentications/Register/Register";
 import Covarage from "../Pages/Covarage/Covarage";
+import AboutUs from "../Pages/AboutUs/AboutUs";
+import PrivetRoutes from "../Routes/PrivetRoutes";
+import SendParcel from "../Pages/SendParcel/SendParcel";
+
 
 
 export const router = createBrowserRouter([
@@ -19,9 +23,21 @@ export const router = createBrowserRouter([
         Component: Home
       },
       {
-        path: "/covarage",
+        path: "covarage",
         Component: Covarage,
       },
+      {
+        path: "aboutus",
+        Component: AboutUs,
+      },
+{
+  path: 'sendparcel',
+  Component: () => (
+    <PrivetRoutes>
+      <SendParcel />
+    </PrivetRoutes>
+  ),
+},
 
     ]
   },
